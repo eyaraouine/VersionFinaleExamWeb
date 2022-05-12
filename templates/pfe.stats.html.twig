@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Statistiques PFEs{% endblock %}
+
+
+
+{% block body %}
+
+    <div class="container">
+        <div class="alert alert-info">
+            Nombre de PFEs par entreprise</div>
+    <div class="row">
+        {% for entreprise in pfesParEntreprise %}
+            <div class="card text-white bg-{%if(loop.index is odd)%}primary{% else %}danger{% endif %} m-2 col-3" style="max-width: 18rem;">
+                <div class="card-header">{{ entreprise.designation }}</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ entreprise[1] }} Pfe(s)</h5>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}
+

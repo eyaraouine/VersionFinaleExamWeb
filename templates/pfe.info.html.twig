@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Infos PFE{% endblock %}
+{% block body %}
+<div class="alert alert-success">
+   Votre pfe a été ajouté avec succès
+</div>
+<div class="alert alert-info">
+    <h1>Les informations relatives à votre pfe sont les suivantes: </h1><br>
+    Votre nom est: {{ pfe.studentName }} <br>
+    Le titre de votre pfe est: {{ pfe.title }} <br>
+   Vous avez effectué le pfe dans l'entreprise: {{ pfe.enterprise }}
+</div>
+{% endblock  %}
